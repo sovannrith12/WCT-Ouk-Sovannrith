@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Drawing App</title>
+    <style>
+        canvas {
+            border: 2px solid black;
+            cursor: crosshair;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interactive Drawing App</h1>
+    
+    <canvas id="drawCanvas" width="600" height="400"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('drawCanvas');
+        const ctx = canvas.getContext('2d');
+        let isDrawing = false;
+        let x = 0;
+        let y = 0;
+
+        // Start drawing when mouse is pressed down
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            [x, y] = [e.offsetX, e.offsetY];
+        });
+
+        // Draw as the mouse moves
+        canvas.addEventListener('mousemove', (e) => {
+            if (!isDrawing) return;
+            const newX = e.offsetX;
+            const newY = e.offsetY;
+            drawLine(x, y, newX, newY);
+            [x, y] = [newX, newY];
+        });
+
+        // Stop drawing when mouse is released or leaves the canvas
+        canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+        });
+
+        canvas.addEventListener('mouseout', () => {
+            isDrawing = false;
+        });
+
+        // Function to draw a line
+        function drawLine(x1, y1, x2, y2) {
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.strokeStyle = '#000'; // Set line color (black)
+            ctx.lineWidth = 2; // Set line thickness
+            ctx.stroke();
+            ctx.closePath();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball Game</title>
+    <style>
+        canvas {
+            border: 2px solid black;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bouncing Ball Game</h1>
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let ballRadius = 20;
+        let x = canvas.width / 2;
+        let y = canvas.height / 2;
+        let dx = 2; // Change in x (speed in x direction)
+        let dy = -2; // Change in y (speed in y direction)
+
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+            ctx.fillStyle = getRandomColor(); // Change color on bounce
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+            drawBall(); // Draw the ball
+            
+            // Bounce the ball off the edges
+            if (x + ballRadius > canvas.width || x - ballRadius < 0) {
+                dx = -dx; // Reverse x direction
+            }
+            if (y + ballRadius > canvas.height || y - ballRadius < 0) {
+                dy = -dy; // Reverse y direction
+            }
+
+            // Update ball position
+            x += dx;
+            y += dy;
+
+            requestAnimationFrame(draw); // Call draw again for the next frame
+        }
+
+        draw(); // Start the game
+    </script>
+
+</body>
+</html>
