@@ -1,0 +1,38 @@
+CSS Compilation: A Closer Look
+CSS compilation is the process of converting preprocessed CSS code (written in languages like Sass or LESS) into standard CSS that browsers can understand. CSS processors like Sass and LESS introduce new features and syntax that are not directly supported by browsers. Compilation involves translating these features into standard CSS syntax.
+
+How CSS Compilation Works
+Parsing: The CSS processor parses the preprocessed CSS code, breaking it down into its constituent parts (selectors, properties, values).
+Evaluation: The processor evaluates any variables, mixins, or functions defined in the code and replaces them with their corresponding values.
+Compilation: The processor converts the preprocessed code into standard CSS syntax, ensuring that browsers can interpret it correctly.
+Output: The compiled CSS is typically saved as a separate file that can be linked to your HTML document.
+Example: Compiling Sass to CSS
+Sass Code:
+
+SCSS
+$primary-color: #007bff;
+
+.button {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+Use code with caution.
+
+Compiled CSS:
+
+CSS
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+Use code with caution.
+
+In this example, the Sass processor expands the $primary-color variable and outputs the compiled CSS.
+
+Note: The specific steps and output may vary depending on the CSS processor and its configuration. Many CSS processors also offer additional features like source maps and error handling to aid in development.

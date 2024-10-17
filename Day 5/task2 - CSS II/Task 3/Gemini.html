@@ -1,0 +1,65 @@
+Sass: A Superset of CSS
+Sass is a CSS preprocessor that extends the capabilities of CSS by adding features like nesting, variables, mixins, and more. It offers a more efficient and organized way to write CSS.
+
+Key Differences Between Sass and Regular CSS:
+
+Nesting: In Sass, you can nest selectors within each other, improving code readability and organization.
+Variables: Sass allows you to define variables for reusable values, making your CSS more maintainable.
+Partials: You can create partial files (files with a .scss extension) that can be imported into other Sass files.
+Mixins: Mixins are reusable blocks of CSS code that can be included in other stylesheets.
+Example: Sass File
+SCSS
+// Variables
+$primary-color: #007bff;
+$font-family: Arial, sans-serif;
+
+// Nesting
+.button {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primary-color,   
+ 10%);
+  }
+}
+
+// Partials
+@import "partials/mixins";
+
+// Using a mixin
+.box {
+  @include border-radius(5px);
+}
+Use code with caution.
+
+Compiled CSS
+CSS
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #006ebf;   
+
+}
+
+.box {
+  border-radius: 5px;
+}
+Use code with caution.
+
+Notable Differences:
+
+Nesting: The &:hover selector is nested within the .button selector, making the code more organized.
+Variables: The $primary-color variable is used to define the button's background color.
+Partials: The @import "partials/mixins"; directive imports a partial file containing mixins.
+Mixins: The @include border-radius(5px); statement uses the border-radius mixin to apply rounded corners to the .box element.
+As you can see, Sass provides a more concise and readable way to write CSS, especially for larger projects.

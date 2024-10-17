@@ -1,0 +1,59 @@
+Theming in CSS: A Guide to Dynamic Styling
+Theming in CSS refers to the process of creating multiple visual styles for a website, allowing users to choose their preferred appearance. This can be achieved using various techniques, including CSS variables, media queries, and preprocessors like Sass.
+
+Using Sass for Theming
+Sass provides a powerful way to implement theming. By defining variables for colors, fonts, and other styles, you can easily switch between different themes by simply changing the variable values.
+
+Example: Creating a Light and Dark Theme
+
+SCSS
+// Variables for light theme
+$light-background: #f0f0f0;
+$light-text-color: #333;
+
+// Variables for dark theme
+$dark-background: #222;
+$dark-text-color: #fff;
+
+// Theme switcher function
+@mixin theme($theme) {
+  @if $theme == light {
+    body {
+      background-color: $light-background;
+      color: $light-text-color;
+    }
+  } @else if $theme == dark {
+    body {
+      background-color: $dark-background;
+      color: $dark-text-color;
+    }
+  }
+}
+
+// Use the theme switcher
+.theme-switch {
+  cursor: pointer;
+  &:hover {
+    background-color: #ccc;
+  }
+}
+
+.theme-switch.light {
+  @include theme(light);
+}
+
+.theme-switch.dark {
+  @include theme(dark);
+}
+Use code with caution.
+
+In this example:
+
+We define variables for the light and dark themes.
+A theme mixin is created to apply the corresponding styles based on the theme.
+The .theme-switch class is used to toggle between the light and dark themes.
+To switch themes:
+
+Add a button or other element with the .theme-switch class.
+Use JavaScript to toggle the light or dark class on the .theme-switch element when the user clicks it.
+By using Sass variables and mixins, you can easily create and manage multiple themes for your website, providing users with a customizable experience.

@@ -1,0 +1,90 @@
+Inline, Internal, and External CSS
+Inline CSS
+Definition: CSS rules are directly applied to individual HTML elements using the style attribute.
+Example:
+HTML
+<p style="color: red; font-size: 20px;">This is a paragraph with inline styles.</p>
+Use code with caution.
+
+Advantages:
+Quick and easy to apply specific styles to individual elements.
+Disadvantages:
+Makes HTML code less readable and maintainable.
+Difficult to reuse styles across multiple elements.
+Internal CSS
+Definition: CSS rules are defined within the <head> section of an HTML document, enclosed in <style> tags.
+Example:
+
+HTML
+<head>
+    <style>
+        p {
+            color: blue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+Use code with caution.
+
+Advantages:
+Easier to manage and reuse styles within a single HTML document.
+Improves readability of the HTML code.
+Disadvantages:
+Not suitable for large or complex stylesheets.
+Styles cannot be reused across multiple HTML documents.
+External CSS
+Definition: CSS rules are defined in a separate .css file and linked to the HTML document using the <link> tag.
+Example:
+HTML
+<head>
+    <link rel="stylesheet"   
+ href="styles.css">
+</head>
+Use code with caution.
+
+styles.css:
+CSS
+p {
+    color: green;
+    font-size: 16px;
+}
+Use code with caution.
+
+Advantages:
+Best for large or complex stylesheets.
+Improves code organization and maintainability.
+Allows styles to be reused across multiple HTML documents.
+Disadvantages:
+Requires additional HTTP requests to load the CSS file.
+Demonstrating All Three Methods:
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Styles</title>
+    <style>
+        .internal-style {
+            color: purple;
+            font-size: 22px;
+        }
+    </style>
+    <link rel="stylesheet" href="external.css">
+</head>
+<body>
+    <p style="color: red; font-size: 20px;">This is a paragraph with inline styles.</p>
+    <p class="internal-style">This is a paragraph with internal styles.</p>
+    <p>This is a paragraph with external styles.</p>
+</body>
+</html>
+Use code with caution.
+
+external.css:
+
+CSS
+p {
+    color: green;
+    font-size: 16px;
+}
+Use code with caution.
+
+This example demonstrates the three different methods of applying CSS styles to HTML elements. Each method has its own advantages and disadvantages, and the best choice depends on the specific needs of your project.

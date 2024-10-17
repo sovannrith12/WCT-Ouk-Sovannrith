@@ -1,0 +1,73 @@
+Alignment and Display in CSS
+Text Alignment
+text-align: Used to align text within its container.
+left: Aligns text to the left.
+center: Centers the text.
+right: Aligns text to the right.
+justify: Justifies the text, spreading it out evenly across the line.
+Vertical Alignment
+vertical-align: Used to align the content of an inline element vertically within its line box.
+top: Aligns the top of the element with the top of the line box.
+middle: Aligns the middle of the element with the middle of the line box.
+bottom: Aligns the bottom of the element with the bottom of the line box.
+baseline: Aligns the baseline of the element with the baseline of the other elements on the line.
+Display Properties
+block: Elements are displayed as blocks, taking up the full width of their container and starting on a new line.
+inline: Elements are displayed inline, without starting on a new line.
+inline-block: Elements are displayed inline, but they can have width, height, and margins like block elements.
+flex: Enables flexible box layout, providing a powerful way to arrange elements and control their spacing.
+Example HTML Document
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alignment and Display</title>
+    <style>
+        .container {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .vertical-align-middle {
+            vertical-align: middle;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flex-item {
+            flex: 1;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        This text is centered.
+    </div>
+
+    <div class="container">
+        <span class="vertical-align-middle">This text is vertically aligned in the middle.</span>
+    </div>
+
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>   
+
+</body>
+</html>
+Use code with caution.
+
+Explanation
+Text Alignment: The first container demonstrates text alignment using text-align: center.
+Vertical Alignment: The second container uses vertical-align: middle to align the text vertically within its span element.
+Flexbox Layout: The third container uses flexbox to arrange its child elements evenly using justify-content: space-between.

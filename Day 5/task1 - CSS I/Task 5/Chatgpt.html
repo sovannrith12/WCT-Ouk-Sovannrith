@@ -1,0 +1,68 @@
+Inline Styles in HTML
+Inline styles are CSS properties applied directly to HTML elements using the style attribute. This method allows you to quickly apply unique styling to individual elements without creating a separate stylesheet or writing multiple rules.
+
+Example of an HTML Document with Inline Styles
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Styles Example</title>
+</head>
+<body>
+
+    <h1 style="color: blue; font-size: 36px; text-align: center;">Welcome to My Website</h1>
+
+    <p style="font-family: Arial, sans-serif; color: green; font-size: 18px;">
+        This paragraph has an inline style applied directly to it. The text is styled in green, with a specific font and size.
+    </p>
+
+    <button style="background-color: orange; color: white; border: none; padding: 10px;">
+        Click Me
+    </button>
+
+</body>
+</html>
+Explanation of the Inline Styles
+Heading (<h1>):
+
+color: blue; — Sets the text color of the heading to blue.
+font-size: 36px; — Specifies the font size of the heading.
+text-align: center; — Centers the heading text within the page.
+Paragraph (<p>):
+
+font-family: Arial, sans-serif; — Specifies the font used for the paragraph text.
+color: green; — Sets the text color to green.
+font-size: 18px; — Sets the font size of the paragraph to 18 pixels.
+Button (<button>):
+
+background-color: orange; — Sets the background color of the button to orange.
+color: white; — Sets the text color of the button to white.
+border: none; — Removes any borders around the button.
+padding: 10px; — Adds padding around the button text for spacing.
+Pros and Cons of Using Inline Styles
+Pros:
+Quick and Easy:
+
+Inline styles are quick to apply since you only need to add the style attribute directly to an element.
+Specific to One Element:
+
+Inline styles are applied directly to individual elements, which makes them ideal for one-off changes where you don’t want to affect other elements.
+No External File Needed:
+
+You don’t need an external CSS file, making inline styles useful for small projects or specific, minor adjustments.
+Cons:
+Poor Maintainability:
+
+Inline styles can clutter the HTML and make it difficult to maintain as your project grows, especially when applied to multiple elements.
+Lack of Reusability:
+
+Styles defined inline cannot be reused across multiple elements or pages. If you need the same style on multiple elements, you must apply it repeatedly.
+Overcomplicates HTML:
+
+Inline styles mix content with presentation, which violates the principle of separation of concerns. This can make your HTML more difficult to read and manage.
+Harder to Override:
+
+Inline styles have high specificity, which can make it difficult to override them with other styles (e.g., styles from an external or internal stylesheet).

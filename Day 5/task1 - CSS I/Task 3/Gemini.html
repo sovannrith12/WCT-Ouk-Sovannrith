@@ -1,0 +1,51 @@
+CSS Selectors: Targeting Elements
+CSS selectors are used to specify which HTML elements should be affected by CSS styles. They act as a way to identify and target specific elements within an HTML document.
+
+Types of CSS Selectors
+Element Selector: Targets elements based on their tag name.
+Class Selector: Targets elements that have a specific class attribute.
+ID Selector: Targets a single element with a unique ID attribute.
+Attribute Selector: Targets elements based on their attributes.
+Pseudo-Class Selector: Targets elements based on their state or condition.
+Example HTML Document
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors</title>
+    <style>
+        /* Element selector: Targets all paragraphs */
+        p {
+            color: blue;
+        }
+
+        /* Class selector: Targets elements with the class "special" */
+        .special {
+            font-weight: bold;
+        }
+
+        /* ID selector: Targets the element with the ID "my-heading" */
+        #my-heading {
+            color: red;
+            text-align: center;
+        }
+
+        /* Attribute selector: Targets elements with the attribute "data-language" */
+        [data-language="python"] {
+            font-style: italic;
+        }
+
+        /* Pseudo-class selector: Targets links that haven't been visited */
+        a:link {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="my-heading">Welcome to CSS Selectors</h1>
+    <p>This is a regular paragraph.</p>
+    <p class="special">This is a paragraph with the "special" class.</p>
+    <p data-language="python">This paragraph is written in Python.</p>
+    <a href="https://example.com">Visit my website</a>
+</body>
+</html>

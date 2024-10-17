@@ -1,0 +1,101 @@
+Components in CSS: Reusable Building Blocks
+CSS components are reusable blocks of code that define the styles for specific elements or groups of elements. They can significantly enhance code reusability and maintainability, especially in large projects.
+
+Creating a Card Component in Sass
+card.scss:
+
+SCSS
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.card-button {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+Use code with caution.
+
+Compiled CSS
+CSS
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.card-button {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+Use code with caution.
+
+Structuring Components in a Sass Project
+A common way to structure components in a Sass project is to create separate partial files for each component. This helps keep your code organized and reusable.
+
+project-structure:
+
+scss/
+  components/
+    card.scss
+    button.scss
+    navbar.scss
+  styles.scss
+styles.scss:
+
+SCSS
+@import "components/card";
+@import "components/button";
+@import "components/navbar";
+
+/* Other global styles */
+Use code with caution.
+
+By using components, you can create a modular and maintainable CSS structure. You can easily reuse components across different parts of your project, making it easier to update and manage your styles.

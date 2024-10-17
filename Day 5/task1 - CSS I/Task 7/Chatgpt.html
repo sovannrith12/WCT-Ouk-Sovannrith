@@ -1,0 +1,89 @@
+Online Fonts and Favicon in Web Development
+Online fonts (also known as web fonts) are fonts that are not installed on the user's device but are loaded from a web server when a web page is accessed. This allows developers to use unique, custom fonts that might not be available by default on all devices.
+
+Google Fonts is one of the most popular resources for free and open-source web fonts. Using Google Fonts, you can easily integrate a variety of custom fonts into your website.
+
+A favicon (short for "favorite icon") is a small icon displayed in a browser's tab, bookmarks, or address bar. It's a way to visually represent your website.
+
+How to Use Google Fonts in an HTML Document
+Go to Google Fonts.
+Choose a font you like.
+Copy the <link> provided by Google to include the font in your HTML document.
+Use the font in your CSS.
+Example Using Google Fonts:
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Google Fonts and Favicon</title>
+    
+    <!-- Step 3: Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    
+    <!-- Step 6: Add Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <style>
+        /* Step 4: Apply Google Fonts */
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            color: #333;
+        }
+
+        h1 {
+            font-family: 'Lobster', cursive;
+            color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Web Page</h1>
+    <p>
+        This page is styled using Google Fonts. The body text uses the 'Roboto' font, while the heading uses the 'Lobster' font. 
+    </p>
+    
+    <p>
+        A favicon has also been added to the page. It will show up in the browser tab.
+    </p>
+
+</body>
+</html>
+Explanation:
+Google Fonts:
+
+Linking the Font:
+The <link> tag imports the desired fonts from Google Fonts. In this case, we’re using both the Roboto and Lobster fonts.
+The wght@400;700 indicates that we are importing two font weights: regular (400) and bold (700).
+Using the Font in CSS:
+The font-family property in the body element applies the Roboto font to all text on the page.
+The h1 tag uses Lobster, a decorative cursive font.
+Favicon:
+
+The <link rel="icon" href="favicon.png"> tag references a favicon file, typically a 16x16 or 32x32 pixel .ico or .png image.
+This image is displayed next to the title of the web page in the browser tab and bookmarks.
+Advantages of Using Google Fonts:
+Wide Variety: Google Fonts offers a huge collection of free fonts with different styles and weights.
+Cross-Browser Compatibility: Fonts from Google are optimized to work across all major browsers and devices.
+Easy to Implement: You only need a simple <link> tag to use a font from Google Fonts.
+What is a Favicon?
+A favicon is a small, iconic image that represents your website. It appears in the browser tab, bookmarks, and other areas in the browser.
+
+How to Add a Favicon:
+You need an image file (usually .ico, .png, or .svg) for the favicon.
+Use the <link> tag in the <head> of your HTML document to reference the image.
+Example:
+html
+Copy code
+<link rel="icon" type="image/png" href="favicon.png">
+rel="icon" specifies that the file is the website's favicon.
+type="image/png" defines the format of the favicon.
+href="favicon.png" links to the favicon image file.
+Conclusion:
+Google Fonts: Easy-to-use, customizable fonts that enhance the aesthetics of your website.
+Favicon: A small but essential element that visually identifies your website in a browser.
+By combining both features, you improve the design and branding of your website, making it more user-friendly and professional.

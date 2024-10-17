@@ -1,0 +1,85 @@
+CSS Selectors Overview
+CSS selectors are patterns used to select and apply styles to HTML elements. They define which HTML elements the styles should be applied to. Different types of selectors allow you to target elements by tag name, class, ID, attributes, and even their state (like hover).
+
+Here are the common types of CSS selectors:
+
+Element Selector: Targets elements by their tag name (e.g., p, h1, div).
+Class Selector: Targets elements with a specific class attribute (e.g., .example-class).
+ID Selector: Targets a specific element with a unique ID attribute (e.g., #example-id).
+Attribute Selector: Targets elements with specific attributes or attribute values (e.g., [type="text"]).
+Pseudo-classes: Targets elements in a specific state, like :hover or :nth-child().
+Example HTML Document Using Various Selectors
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Example</title>
+    <style>
+        /* Element Selector */
+        h1 {
+            color: #4caf50; /* Green color for all <h1> elements */
+            text-align: center;
+        }
+
+        /* Class Selector */
+        .highlight {
+            background-color: #ffeb3b; /* Yellow background for elements with the class 'highlight' */
+            padding: 10px;
+        }
+
+        /* ID Selector */
+        #unique-paragraph {
+            font-size: 20px;
+            color: #1e90ff; /* Blue text for the element with ID 'unique-paragraph' */
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            border: 2px solid #333; /* Add a solid border to text input fields */
+            padding: 5px;
+        }
+
+        /* Pseudo-class Selector */
+        a:hover {
+            color: #ff6347; /* Change link color to tomato when hovered over */
+        }
+
+        /* Pseudo-class nth-child Selector */
+        li:nth-child(odd) {
+            background-color: #f0f8ff; /* Light blue background for odd list items */
+        }
+    </style>
+</head>
+<body>
+    <!-- Element Selector -->
+    <h1>CSS Selectors Demo</h1>
+
+    <!-- Class Selector -->
+    <p class="highlight">This paragraph is styled using a class selector.</p>
+
+    <!-- ID Selector -->
+    <p id="unique-paragraph">This paragraph has a unique ID and is styled accordingly.</p>
+
+    <!-- Attribute Selector -->
+    <form>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name">
+        <br><br>
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="email">
+    </form>
+
+    <!-- Pseudo-class Selector -->
+    <a href="#">Hover over this link to see the effect!</a>
+
+    <!-- nth-child Pseudo-class Selector -->
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,134 @@
+Styling Text and Fonts in CSS
+CSS allows for extensive customization of text and fonts on your webpage. You can define the appearance of text, including its font family, size, weight, alignment, and much more. This control gives you the flexibility to create visually appealing and readable content.
+
+Common CSS Text Properties:
+font-family: Specifies the font to be used for text.
+font-size: Determines the size of the text.
+font-weight: Defines the thickness of the text.
+text-align: Aligns text to the left, right, center, or justify.
+line-height: Sets the space between lines of text.
+color: Changes the color of the text.
+Example HTML and CSS for Styling Text and Fonts
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and Font Styling</title>
+    <style>
+        /* Setting the body font properties */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Styling headings */
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            color: #1a73e8;
+        }
+
+        h2 {
+            font-family: 'Tahoma', sans-serif;
+            font-size: 28px;
+            text-align: left;
+            font-weight: normal;
+            color: #ff5722;
+        }
+
+        /* Styling paragraphs */
+        p {
+            font-family: 'Verdana', sans-serif;
+            font-size: 18px;
+            text-align: justify;
+            color: #4a4a4a;
+        }
+
+        /* Styling links */
+        a {
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Styling a highlighted paragraph */
+        .highlight {
+            font-weight: bold;
+            font-size: 20px;
+            color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Heading 1 -->
+    <h1>Welcome to My Styled Webpage</h1>
+
+    <!-- Heading 2 -->
+    <h2>Introduction to CSS Text Styling</h2>
+
+    <!-- Paragraphs with different text styling -->
+    <p>
+        This is an example of how you can use CSS to style text in various ways. You can modify the font family, size, weight, color, and alignment to enhance the readability and aesthetics of your web page.
+    </p>
+
+    <p class="highlight">
+        This paragraph is highlighted with bold text and a larger font size.
+    </p>
+
+    <!-- Links with styled text -->
+    <p>For more information, visit <a href="https://www.example.com">this website</a>.</p>
+
+</body>
+</html>
+Explanation of the CSS Styles:
+Body:
+
+font-family: Arial, sans-serif;: Sets the default font for the entire page to Arial, with a fallback to any sans-serif font.
+font-size: 16px;: Defines the default font size as 16 pixels.
+line-height: 1.6;: Sets the line height, making the text easier to read by adding space between lines.
+color: #333;: Changes the default text color to dark gray.
+Headings:
+
+h1:
+font-family: 'Georgia', serif;: Changes the font family to Georgia, with a fallback to any serif font.
+font-size: 36px;: Increases the font size to 36 pixels for the main heading.
+font-weight: bold;: Makes the text bold.
+text-align: center;: Centers the heading text.
+color: #1a73e8;: Changes the text color to a blue shade.
+h2:
+font-family: 'Tahoma', sans-serif;: Uses the Tahoma font for the subheading.
+font-size: 28px;: Sets the font size to 28 pixels.
+text-align: left;: Aligns the text to the left.
+color: #ff5722;: Applies an orange color to the subheading text.
+Paragraphs:
+
+p:
+font-family: 'Verdana', sans-serif;: Sets the font to Verdana.
+font-size: 18px;: Increases the font size for paragraphs.
+text-align: justify;: Justifies the paragraph text to align both left and right edges.
+color: #4a4a4a;: Changes the paragraph text color to grayish.
+Highlighted Paragraph:
+.highlight:
+font-weight: bold;: Makes the text bold.
+font-size: 20px;: Increases the font size.
+color: #e91e63;: Changes the text color to pink.
+Links:
+
+a:
+font-family: 'Courier New', monospace;: Applies a monospace font to links.
+font-size: 16px;: Sets the link text size.
+font-weight: bold;: Makes the link text bold.
+color: #007bff;: Sets the link color to blue.
+text-decoration: none;: Removes the default underline from the link.
+Conclusion:
+CSS provides various properties for customizing text and fonts, allowing developers to create visually appealing web pages. By controlling properties like font-family, font-size, font-weight, and text-align, you can make text more readable and aligned with the design of your site.

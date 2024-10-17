@@ -1,0 +1,56 @@
+Variables, Functions, and Inheritance in Sass
+Variables
+Variables in Sass allow you to store values that can be reused throughout your stylesheet. This makes it easier to maintain consistency and make global changes.
+
+Example:
+
+SCSS
+$primary-color: #007bff;
+$font-family: Arial, sans-serif;
+
+.button {
+  background-color: $primary-color;
+  color: white;
+  font-family: $font-family;
+}
+Use code with caution.
+
+Functions
+Sass functions provide built-in functionality for common tasks like color manipulation, mathematical operations, and string manipulation.
+
+Example:
+
+SCSS
+.dark-button {
+  background-color: darken($primary-color, 20%);
+  color: white;
+}
+Use code with caution.
+
+In this example, the darken() function is used to create a darker shade of the $primary-color.
+
+Inheritance
+Sass supports inheritance through nesting. When a nested selector is defined within a parent selector, it inherits the properties of the parent.
+
+Example:
+
+SCSS
+.container {
+  border: 1px solid #ccc;
+  padding: 10px;
+
+  .item {
+    background-color: #f0f0f0;
+    padding: 5px;
+  }
+}
+Use code with caution.
+
+In this example, the .item selector inherits the border: 1px solid #ccc; and padding: 10px; properties from its parent .container selector.
+
+Benefits of Using Variables, Functions, and Inheritance:
+
+Improved Readability: Variables and functions make your code more concise and easier to understand.
+Enhanced Maintainability: By using variables and functions, you can centralize style definitions and make global changes more easily.
+Increased Consistency: Inheritance helps ensure that styles are applied consistently across your website.
+Better Performance: Using variables and functions can sometimes improve performance by reducing the number of CSS rules that need to be parsed.

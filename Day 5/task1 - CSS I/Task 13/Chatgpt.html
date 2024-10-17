@@ -1,0 +1,88 @@
+Understanding CSS Variables (Custom Properties)
+CSS Variables, also known as custom properties, are entities defined by CSS authors that contain specific values to be reused throughout a stylesheet. They follow a simple syntax and provide a way to maintain consistency and improve maintainability in CSS code.
+
+How CSS Variables Work
+Definition: CSS variables are defined using a custom property notation, which starts with two dashes (--), followed by the variable name. They can be defined within a selector, making them scoped to that selector or globally if defined in the :root selector.
+
+Usage: Once defined, CSS variables can be accessed using the var() function, which takes the variable name as an argument. This allows for easy referencing and applying of the variable values to CSS properties.
+
+Dynamic Changes: CSS variables can be updated dynamically using JavaScript or through CSS changes, allowing for real-time updates in styles without needing to rewrite multiple rules.
+
+Example: Using CSS Variables
+Here’s an example that demonstrates how to define and use CSS variables in a simple HTML document. The example showcases maintaining consistency in a color scheme and how changing the variable values affects the styles.
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Example</title>
+    <style>
+        :root {
+            --primary-color: #3498db; /* Define primary color */
+            --secondary-color: #2ecc71; /* Define secondary color */
+            --text-color: #ffffff; /* Define text color */
+            --font-size: 16px; /* Define base font size */
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            font-size: var(--font-size);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: var(--secondary-color);
+        }
+
+        .button {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: var(--font-size);
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #27ae60; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to CSS Variables</h1>
+    <p>This page demonstrates the use of CSS variables to maintain a consistent color scheme and styling.</p>
+    <button class="button">Click Me</button>
+
+    <script>
+        // Example of changing a CSS variable dynamically
+        document.querySelector('.button').addEventListener('click', function() {
+            document.documentElement.style.setProperty('--primary-color', '#e74c3c'); // Change primary color
+        });
+    </script>
+
+</body>
+</html>
+Explanation of the Example
+Defining Variables:
+
+In the :root selector, CSS variables are defined using the -- notation. Variables like --primary-color, --secondary-color, --text-color, and --font-size are created.
+Using Variables:
+
+The variables are accessed using the var() function in the body styles, heading, and button. For instance, background-color: var(--primary-color); applies the primary color to the background of the body.
+Dynamic Changes:
+
+The JavaScript code listens for a click event on the button. When clicked, it changes the value of --primary-color to #e74c3c, which immediately updates the background color of the body without needing to rewrite any CSS rules.
+Benefits of Using CSS Variables
+Maintainability: Changing a single variable value updates all instances where it is used, making it easier to maintain and update styles.
+Consistency: Promotes consistent styling across the site, as developers can define a color scheme or set of properties in one place.
+Dynamic Styling: CSS variables can be manipulated in real-time, allowing for interactive and dynamic styling that responds to user actions.
+Conclusion
+CSS variables are a powerful feature that enhances the maintainability and consistency of CSS code. By understanding how to define, use, and dynamically update these variables, developers can create more flexible and responsive designs in their web applications.
