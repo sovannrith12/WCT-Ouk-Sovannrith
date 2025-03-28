@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Student Management</title>
+</head>
+
+<body>
+
+    <!-- add student detail form -->
+    <div class="container">
+        <h1>Student Management</h1>
+        <form method="POST" action="process.php">
+            <input type="text" name="name" placeholder="Student Name" required>
+            <input type="text" name="gender" placeholder="Gender" required>
+            <input type="number" name="age" placeholder="Age" required>
+            <input type="text" name="class" placeholder="Class" required>
+            <input type="text" name="grade" placeholder="Grade" required>
+            <button type="submit" name="add">Add Student</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
